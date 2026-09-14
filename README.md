@@ -71,4 +71,3 @@ Security analysis and reflection: [`WRITEUP.md`](./WRITEUP.md)
 ## 👤 Author
 
 **Hadi Faheem**
-BS Cybersecurity — University of Management and Technology (UMT), Lahore
