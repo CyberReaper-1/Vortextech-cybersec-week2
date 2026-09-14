@@ -1,8 +1,18 @@
-Vortex Tech Cyber Security Internship — Week 2
+# 🔐 Vortex Tech Cyber Security Internship — Week 2
 
-Hands-on with basic security tools: a Python password strength checker (with automated tests) and Nmap port scans of my own machine, my home network, and Nmap's official public test target.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
+![Nmap](https://img.shields.io/badge/Nmap-7.98-green?logo=nmap&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 
-Repository Structure
+Hands-on with basic security tools: a Python password strength checker (with
+automated tests) and Nmap port scans of my own machine, my home network, and
+Nmap's official public test target.
+
+---
+
+## 📁 Repository Structure
+
+```
 VortexTech_Internship_Week2/
 ├── README.md
 ├── WRITEUP.md
@@ -10,37 +20,55 @@ VortexTech_Internship_Week2/
 │   ├── passwordchecker.py
 │   └── test_password_checker.py
 └── scan_results/
-    └── port_scan_results.md
-Password Checker
+    └── scan_results.md
+```
 
-passwordchecker.py rates a password as Very Weak, Weak, Medium, or Strong based on length (8+ chars), character variety (uppercase, lowercase, digit, special character), and a common/breached-password blacklist check.
+---
 
-Run it:
+## 🔑 Password Checker
 
-bash
+`passwordchecker.py` rates a password as **Very Weak**, **Weak**, **Medium**,
+or **Strong** based on:
+
+- Length (8+ characters)
+- Character variety — uppercase, lowercase, digit, special character
+- A common/breached-password blacklist check
+
+**Run it:**
+```bash
 python passwordchecker.py --demo              # built-in demo cases
 python passwordchecker.py -p "YourPassword"   # check a single password
 python passwordchecker.py                     # interactive mode
+```
 
-Run the automated tests:
-
-bash
+**Run the automated tests:**
+```bash
 python test_password_checker.py
+```
+✅ 9/9 test cases pass, covering all four rating tiers.
 
-9/9 test cases pass, covering Very Weak, Weak, Medium, and Strong ratings.
+---
 
-Port Scanning
+## 🌐 Port Scanning
 
-Performed with Nmap against:
+Performed with [Nmap](https://nmap.org/) against:
 
-localhost (own machine)
-My home network range 192.168.18.0/24
-scanme.nmap.org — Nmap's official public test host, which the Nmap project explicitly permits the community to scan
+| Target | Scope |
+|---|---|
+| `localhost` | Own machine |
+| `192.168.18.0/24` | Own home network |
+| `scanme.nmap.org` | Nmap's official public test host — scanning explicitly permitted by the operator |
 
-Full results and per-port service explanations are in scan_results/scan_results.md. The security analysis and reflection are in WRITEUP.md.
+Full results and per-port service explanations: [`scan_results/scan_results.md`](./scan_results/scan_results.md)
+Security analysis and reflection: [`WRITEUP.md`](./WRITEUP.md)
 
-Ethics note: Only localhost, my own home network, and the explicitly authorized scanme.nmap.org test host were scanned. No unauthorized third-party network was accessed.
+> ⚠️ **Ethics note:** Only localhost, my own home network, and the explicitly
+> authorized scanme.nmap.org test host were scanned. No unauthorized
+> third-party network was accessed.
 
-Author
+---
 
-Hadi Faheem 
+## 👤 Author
+
+**Hadi Faheem**
+BS Cybersecurity — University of Management and Technology (UMT), Lahore
